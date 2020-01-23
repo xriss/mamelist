@@ -1,0 +1,23 @@
+{
+  "name": "mamelist",
+  "description": "mame list xml parse",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "js/cmd.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xriss/mamelist.git",
+    "directory": "live"
+  },
+  "bin": {
+    "mamelist": "js/cmd.js"
+  },
+  "directories": {},
+  "dependencies": {
+    "json-stable-stringify": "^1.0.1",
+    "papaparse": "^5.1.0",
+    "pify": "^4.0.1",
+    "yargs": "^14.2.0"
+  },
+  "devDependencies": {}
+}
