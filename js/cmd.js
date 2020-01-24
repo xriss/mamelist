@@ -16,8 +16,7 @@ cmd.parse=function(argv)
 {
 	argv.filename_mamelist=__filename
 
-	argv.from = argv.from || process.env.MAMELIST_FROM || "from"
-	argv.into = argv.into || process.env.MAMELIST_INTO || "into"
+	argv.dir = argv.dir || process.env.MAMELIST_DIR || "data"
 
 }
 
@@ -34,14 +33,11 @@ cmd.run=async function(argv)
 `
 >	mamelist parse
 
-Parse {from}/mamelist.xml and {from}/roms/* to create sorted symlinked 
-copies of available roms and info dump files into {into}/ folders.
+Parse {dir}/mamelist.xml and {dir}/roms/* to create sorted symlinked 
+copies of available roms and info dump files into {dir}/list/* folders.
 
-	--from from
-	Directory to process data from.
-
-	--into into
-	Directory to process data into.
+	--dir data
+	Directory to process data within.
 
 `)
 }
