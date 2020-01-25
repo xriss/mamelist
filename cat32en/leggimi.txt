@@ -1,0 +1,13 @@
+--- FILES DI CLASSIFICAZIONE PER MAME ---
+
+Questo progetto è nato e si sviluppa sulle basi del pre-esistente catlist, curato da Triggerfin, su http://www.mameworld.net/catlist. Non intende in alcun modo sostituirsi a quel progetto, ma si limita a portelo avanti finchè Triggerfin non troverà il tempo ed il modo di riprendere con le sue procedure ad aggiornare i files.
+
+Gli aggiornamenti vengono pubblicati su http://www.progettoemma.net/?catlist e sono mantenuti aggiornati grazie al contributo mio, di SWOS e di Scuore
+
+Il progetto di compone di 4 files:
+- CAT32: Classificazioni dei giochi da utilizzare con MAME32: scompattate i files nella cartella FOLDER di mame32, avviate mame32 (o compatibile) per trovare nelal colonna "folders" la suddivisione
+- DELUXE32: classificazione dettagliata, sempre per mame32, che suddivide i giochi per genere e quindi per categoria
+- CATVER: suddivisione per categoria e per versione, in formato compatibile con vari frontend, come ad esempio mamewah
+- GENREV: suddivisione per genere e per versione, in formato compatibile con vari frontend, come ad esempio mamewah
+
+Per segnalare errori, dubbi, consigli o altro, contattatemi sul forum www.progettoemma.ne/forum
