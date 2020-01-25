@@ -12,6 +12,12 @@ change the filtering if you want.
 This is nodejs so should work anywhere but we are assuming you are 
 using bash here.
 
+This repo is also published to https://www.npmjs.com/package/mamelist 
+so you could skip this first install step and just use `npx mamelist` 
+instead as a replacement for `.mamelist` in the instructions bellow. 
+npx will auto download from npm and run using node.
+
+
 First clone this repo and cd into it then...
 
 	npm install
