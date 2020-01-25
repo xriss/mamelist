@@ -18,6 +18,7 @@ var ls=function(a) { console.log(util.inspect(a,{depth:null})) }
 
 parse.run=async function(argv)
 {
+
 	var fn=argv.dir+"/mamelist.xml"
 	console.log( "Reading "+fn )
 	var jdat=jml.from_xml( await pfs.readFile(fn,{ encoding: 'utf8' }) )
@@ -89,6 +90,28 @@ parse.run=async function(argv)
 		catch(e){}
 
 		l[m.name]=m
+	}
+
+
+	var genre="none"
+	var lines=( await pfs.readFile(__dirname+"/../cat32en/Genre.ini",{ encoding: 'utf8' }) ).split(/\r?\n/)
+
+	for(var line of lines)
+	{
+		if(line[0]=="[")
+		{
+			genre=line.replace(/[^0-9a-z ]/gi, '').trim().toLowerCase()
+		}
+		else
+		{
+			var name=line.replace(/[^0-9a-z ]/gi, '').trim().toLowerCase()
+			
+			var rom=l[name]
+			if(rom)
+			{
+				rom.genre=genre
+			}
+		}
 	}
 
 	var fn=argv.dir+"/mamelist.json"
