@@ -1,7 +1,7 @@
 {
   "name": "mamelist",
   "description": "mame list xml parse",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "js/cmd.js",
   "repository": {
