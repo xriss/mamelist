@@ -39,6 +39,19 @@ sort.run=async function(argv)
 		if( ! rom.filesize     ) { ok=false } // no file
 		if( ! rom.displays     ) { ok=false } // no display
 
+		if	(	( rom.genre=="home_systems" )			||
+				( rom.genre=="quiz" )					||
+				( rom.genre=="synth" )					||
+				( rom.genre=="utilities" )				||
+				( rom.genre=="multiplay" )				||
+				( rom.genre=="multicart_board" )		||
+				( rom.genre=="electromechanical" )		||
+				( rom.genre=="portable_systems" )		||
+				( rom.genre=="development_systems" )	||
+				( rom.genre=="professional_systems" )	)
+		{ ok=false } // skip bad genre
+
+
 		if( ! rom.input        ) { ok=false } // no input
 		else
 		{
@@ -64,6 +77,16 @@ sort.run=async function(argv)
 				{
 					forcepush(dirs,decade+"x",rom.name)
 				}
+				var centuary=rom.year[0]+rom.year[1]
+				if( !isNaN(centuary) )
+				{
+					forcepush(dirs,centuary+"xx",rom.name)
+				}
+			}
+
+			if(rom.genre)
+			{
+				forcepush(dirs,rom.genre,rom.name)
 			}
 		}
 

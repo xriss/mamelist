@@ -100,11 +100,11 @@ parse.run=async function(argv)
 	{
 		if(line[0]=="[")
 		{
-			genre=line.replace(/[^0-9a-z ]/gi, '').trim().toLowerCase()
+			genre=line.replace(/[^0-9a-z ]/gi, '').trim().toLowerCase().replace(/\s+/g,"_")
 		}
 		else
 		{
-			var name=line.replace(/[^0-9a-z ]/gi, '').trim().toLowerCase()
+			var name=line.replace(/[^0-9a-z ]/gi, '').trim().toLowerCase().replace(/\s+/g,"_")
 			
 			var rom=l[name]
 			if(rom)
