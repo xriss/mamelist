@@ -26,9 +26,12 @@ cmd.run=async function(argv)
 
 	if( argv._[0]=="parse" )
 	{
-		await require("./parse.js").run(argv)
-
-		return
+		return await require("./parse.js").run(argv)
+	}
+	else
+	if( argv._[0]=="sort" )
+	{
+		return await require("./sort.js").run(argv)
 	}
 
 	// help text
@@ -39,6 +42,13 @@ cmd.run=async function(argv)
 Parse {dir}/mamelist.xml and check the existence of {dir}/roms/* to 
 create a {dir}/mamelist.json file full of usefull information for later 
 sorting.
+
+>	mamelist sort
+
+Create symbolic file links to the rom files in grouped sorted and 
+filtered directories under {dir}/romsort/ this takes up no more disk 
+space. You may then select *ONLY* the directories you want and copy 
+them to you mame cab.
 
 	--dir data
 	Directory to process data within.
