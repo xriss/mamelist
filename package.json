@@ -14,9 +14,11 @@
   },
   "directories": {},
   "dependencies": {
+    "entities": "^2.0.0",
     "json-stable-stringify": "^1.0.1",
     "papaparse": "^5.1.0",
     "pify": "^4.0.1",
+    "sax": "^1.2.4",
     "yargs": "^14.2.0"
   },
   "devDependencies": {}

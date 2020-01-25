@@ -9,6 +9,7 @@ var pfs=require("pify")( require("fs") )
 var stringify = require('json-stable-stringify');
 
 
+var util=require("util")
 var ls=function(a) { console.log(util.inspect(a,{depth:null})); }
 
 
@@ -25,6 +26,8 @@ cmd.run=async function(argv)
 
 	if( argv._[0]=="parse" )
 	{
+		await require("./parse.js").run(argv)
+
 		return
 	}
 
@@ -33,8 +36,9 @@ cmd.run=async function(argv)
 `
 >	mamelist parse
 
-Parse {dir}/mamelist.xml and {dir}/roms/* to create sorted symlinked 
-copies of available roms and info dump files into {dir}/list/* folders.
+Parse {dir}/mamelist.xml and check the existence of {dir}/roms/* to 
+create a {dir}/mamelist.json file full of usefull information for later 
+sorting.
 
 	--dir data
 	Directory to process data within.
